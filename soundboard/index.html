@@ -51,7 +51,7 @@
 
 
     <li data-icon="false">
-    <a class='page-link' href="https://ryanckim.github.io/listen/">Welcome</a>
+    <a class='page-link' href="https://ryanckim.github.io/listen/">SiSEC 2018 evaluation</a>
     </li>
 
 
@@ -64,18 +64,13 @@
          class="inner-collapsible menu"
          data-collapsed-icon="carat-d"
          data-expanded-icon="carat-u">
-    <h4>Example interfaces</h4>
+    <h4>Listening test interfaces</h4>
 
     <ul data-role="listview">
     
     <li data-icon="false">
         <a class='page-link'
             href="https://ryanckim.github.io/listen/soundboard/">Soundboard</a>
-    </li>
-    
-    <li data-icon="false">
-        <a class='page-link'
-            href="https://ryanckim.github.io/listen/mushra/">MUSHRA</a>
     </li>
     
     <li data-icon="false">
@@ -105,10 +100,10 @@
     Previous
 </a>
 
-<h1 class='title'>Soundboard_test</h1>
+<h1 class='title'>Soundboard</h1>
 
 <a 
-    href="https://ryanckim.github.io/listen/mushra/"
+    href="https://ryanckim.github.io/listen/similarity/"
     class='ui-btn-right ui-btn ui-btn-inline ui-mini
            ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
     Next
@@ -140,7 +135,7 @@
 <h2>Thank you, please submit your data:</h2>
 
 <input name="options[slug]" type="hidden" value='soundboard'>
-<input name="options[redirect]" type="hidden" value='https://ryanckim.github.io/listen/mushra/'>
+<input name="options[redirect]" type="hidden" value='https://ryanckim.github.io/listen/similarity/'>
 
 <input name='fields[name]'
        value='My name'
@@ -170,9 +165,30 @@
 
 <!-- Main layout -->
 <div data-role="main" class="ui-content">
-<h1 id="soundboard">Soundboard</h1>
+<h1 id="tutorial">Tutorial</h1>
 
-<p>Soundboard test page</p>
+<p>Here you can listen to some audio samples to get yourself familiarised with the types of degradation to be presented during the listening test.</p>
+
+<p>The reference presented here corresponds to the vocals track perfectly extracted from the mix.</p>
+
+<p>The degradation can be in terms of:</p>
+
+<ul>
+  <li>Distortion in the target (vocals) sound
+    <ul>
+      <li>feeling of parts of the target sound removed</li>
+      <li>timbral degradation (e.g., bright/dull)</li>
+    </ul>
+  </li>
+  <li>Unwanted sound in addition to the target
+    <ul>
+      <li>presence of other tracks from the mix</li>
+      <li>presence of unknown sounds (e.g., noises, “birdies”)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>In the test, please grade the stimuli in terms of the overall similarity to the original vocals as the reference.</p>
 
 
 
@@ -181,21 +197,17 @@
  
 
 
-<p> Set 1 </p>
+<p> Song 1 </p>
 
 <li>
 
 
 
-<button class="soundboard-play" data-inline="true">1</button>
+<button class="soundboard-play" data-inline="true">Original mix</button>
 
 
 
-<button class="soundboard-play" data-inline="true">2</button>
-
-
-
-<button class="soundboard-play" data-inline="true">3</button>
+<button class="soundboard-play" data-inline="true">Reference vocals</button>
 
 
 
@@ -203,21 +215,51 @@
 
 
 
-<p> Set 2 </p>
+<p>  </p>
 
 <li>
 
 
 
-<button class="soundboard-play" data-inline="true">4</button>
+<button class="soundboard-play" data-inline="true">Sample 1</button>
 
 
 
-<button class="soundboard-play" data-inline="true">5</button>
+<button class="soundboard-play" data-inline="true">Sample 2</button>
 
 
 
-<button class="soundboard-play" data-inline="true">6</button>
+<button class="soundboard-play" data-inline="true">Sample 3</button>
+
+
+
+<button class="soundboard-play" data-inline="true">Sample 4</button>
+
+
+
+</li>
+
+
+
+<p>  </p>
+
+<li>
+
+
+
+<button class="soundboard-play" data-inline="true">Sample 5</button>
+
+
+
+<button class="soundboard-play" data-inline="true">Sample 6</button>
+
+
+
+<button class="soundboard-play" data-inline="true">Sample 7</button>
+
+
+
+<button class="soundboard-play" data-inline="true">Sample 8</button>
 
 
 
@@ -239,9 +281,9 @@
   $('#id-soundboard').on('pageshow', function () {
 
       if ('soundboard' === 'soundboard')
-        window.listen.createSoundboard('{"back_button_can_exit_test":true,"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Set 1","sounds":[{"button_label":1,"url":"sounds/dog1.wav"},{"button_label":2,"url":"sounds/dog2.wav"},{"button_label":3,"url":"sounds/dog3.wav"}]},{"name":"Set 2","sounds":[{"button_label":4,"url":"sounds/dog4.wav"},{"button_label":5,"url":"sounds/dog5.wav"},{"button_label":6,"url":"sounds/dog6.wav"}]}]}', 'https://ryanckim.github.io/listen')
+        window.listen.createSoundboard('{"back_button_can_exit_test":true,"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Song 1","sounds":[{"button_label":"Original mix","url":"sounds/Bobby Nobody - Stitch Up/mixture.wav"},{"button_label":"Reference vocals","url":"sounds/Bobby Nobody - Stitch Up/ref_vocals.wav"}]},{"name":null,"sounds":[{"button_label":"Sample 1","url":"sounds/Bobby Nobody - Stitch Up/anchor1_interference.wav"},{"button_label":"Sample 2","url":"sounds/Bobby Nobody - Stitch Up/anchor2_quality.wav"},{"button_label":"Sample 3","url":"sounds/Bobby Nobody - Stitch Up/JY3_vocals.wav"},{"button_label":"Sample 4","url":"sounds/Bobby Nobody - Stitch Up/MDL1_vocals.wav"}]},{"name":null,"sounds":[{"button_label":"Sample 5","url":"sounds/Bobby Nobody - Stitch Up/MELO_vocals.wav"},{"button_label":"Sample 6","url":"sounds/Bobby Nobody - Stitch Up/REP2_vocals.wav"},{"button_label":"Sample 7","url":"sounds/Bobby Nobody - Stitch Up/TAK2_vocals.wav"},{"button_label":"Sample 8","url":"sounds/Bobby Nobody - Stitch Up/UHL3_vocals.wav"}]}]}', 'https://ryanckim.github.io/listen')
       else if ('soundboard' === 'mushra')
-        window.listen.createMUSHRA('{"back_button_can_exit_test":true,"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Set 1","sounds":[{"button_label":1,"url":"sounds/dog1.wav"},{"button_label":2,"url":"sounds/dog2.wav"},{"button_label":3,"url":"sounds/dog3.wav"}]},{"name":"Set 2","sounds":[{"button_label":4,"url":"sounds/dog4.wav"},{"button_label":5,"url":"sounds/dog5.wav"},{"button_label":6,"url":"sounds/dog6.wav"}]}]}', 'https://ryanckim.github.io/listen')
+        window.listen.createMUSHRA('{"back_button_can_exit_test":true,"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Song 1","sounds":[{"button_label":"Original mix","url":"sounds/Bobby Nobody - Stitch Up/mixture.wav"},{"button_label":"Reference vocals","url":"sounds/Bobby Nobody - Stitch Up/ref_vocals.wav"}]},{"name":null,"sounds":[{"button_label":"Sample 1","url":"sounds/Bobby Nobody - Stitch Up/anchor1_interference.wav"},{"button_label":"Sample 2","url":"sounds/Bobby Nobody - Stitch Up/anchor2_quality.wav"},{"button_label":"Sample 3","url":"sounds/Bobby Nobody - Stitch Up/JY3_vocals.wav"},{"button_label":"Sample 4","url":"sounds/Bobby Nobody - Stitch Up/MDL1_vocals.wav"}]},{"name":null,"sounds":[{"button_label":"Sample 5","url":"sounds/Bobby Nobody - Stitch Up/MELO_vocals.wav"},{"button_label":"Sample 6","url":"sounds/Bobby Nobody - Stitch Up/REP2_vocals.wav"},{"button_label":"Sample 7","url":"sounds/Bobby Nobody - Stitch Up/TAK2_vocals.wav"},{"button_label":"Sample 8","url":"sounds/Bobby Nobody - Stitch Up/UHL3_vocals.wav"}]}]}', 'https://ryanckim.github.io/listen')
   })
 </script>
 
