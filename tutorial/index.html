@@ -34,7 +34,7 @@
 
 <body>
 
-<div data-role='page' id='id-soundboard'>
+<div data-role='page' id='id-tutorial'>
 
 
 
@@ -49,10 +49,10 @@
     Previous
 </a>
 
-<h1 class='title'>Soundboard</h1>
+<h1 class='title'>Tutorial</h1>
 
 <a 
-    href="https://ryanckim.github.io/listen/similarity/"
+    href="https://ryanckim.github.io/listen/familiarisation/"
     class='ui-btn-right ui-btn ui-btn-inline ui-mini
            ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
     Next
@@ -83,8 +83,8 @@
 
 <h2>Thank you, please submit your data:</h2>
 
-<input name="options[slug]" type="hidden" value='soundboard'>
-<input name="options[redirect]" type="hidden" value='https://ryanckim.github.io/listen/similarity/'>
+<input name="options[slug]" type="hidden" value='tutorial'>
+<input name="options[redirect]" type="hidden" value='https://ryanckim.github.io/listen/familiarisation/'>
 
 <input name='fields[name]'
        value='My name'
@@ -92,7 +92,7 @@
 >
 
 <input name='fields[experiment_id]'
-       value='soundboard'
+       value='tutorial'
        type='hidden'
 >
 
@@ -116,9 +116,12 @@
 <div data-role="main" class="ui-content">
 <h1 id="tutorial">Tutorial</h1>
 
-<p>Here you can listen to some audio samples to get yourself familiarised with the types of degradation to be presented during the listening test.</p>
+<p>This tutorial page is to help you better understand what you are asked about and what to expect during the test.</p>
 
-<p>The reference presented here corresponds to the vocals track perfectly extracted from the mix.</p>
+<p>The stimuli should be judged in terms of their <strong>overall similarity</strong> to the <strong>original vocals</strong> as the reference. Please note that the reference for comparison is <strong>not</strong> the original mix. In other words, the highest-rated stimulus should sound as close as possible to the <strong>vocals track only</strong>.</p>
+
+<p>Here you can listen to some audio samples with the types of degradation presented during the listening test.
+The <code class="highlighter-rouge">Reference vocals</code> corresponds to the vocals track perfectly extracted from the <code class="highlighter-rouge">Original mix</code>.</p>
 
 <p>The degradation can be in terms of:</p>
 
@@ -126,7 +129,7 @@
   <li>Distortion in the target (vocals) sound
     <ul>
       <li>feeling of parts of the target sound removed</li>
-      <li>timbral degradation (e.g., bright/dull)</li>
+      <li>timbral changes (e.g., brighter/duller)</li>
     </ul>
   </li>
   <li>Unwanted sound in addition to the target
@@ -137,7 +140,7 @@
   </li>
 </ul>
 
-<p>In the test, please grade the stimuli in terms of the overall similarity to the original vocals as the reference.</p>
+<p>There is no defined order of importance of these aspects as you judge the similarity, and you are free to base your decisions on any or any combination of these. Please note again that the presence of other tracks, clean or distorted, is considered as <em>degradation</em> in this test. For example, the <code class="highlighter-rouge">Original mix</code>, although it contains the <code class="highlighter-rouge">Reference vocals</code>, may not be rated the highest.</p>
 
 
 
@@ -227,7 +230,7 @@
   /* This ID page wrapper is needed to get the correct javascript
   triggered with cached pages. I can't come up with anything cleaner at the
   moment */
-  $('#id-soundboard').on('pageshow', function () {
+  $('#id-tutorial').on('pageshow', function () {
 
       if ('soundboard' === 'soundboard')
         window.listen.createSoundboard('{"back_button_can_exit_test":true,"continuous_playback":true,"loop_playback":true,"rows":[{"name":"Song 1","sounds":[{"button_label":"Original mix","url":"sounds/Bobby Nobody - Stitch Up/mixture.flac"},{"button_label":"Reference vocals","url":"sounds/Bobby Nobody - Stitch Up/ref_vocals.flac"}]},{"name":null,"sounds":[{"button_label":"Sample 1","url":"sounds/Bobby Nobody - Stitch Up/anchor1_interference.flac"},{"button_label":"Sample 2","url":"sounds/Bobby Nobody - Stitch Up/anchor2_quality.flac"},{"button_label":"Sample 3","url":"sounds/Bobby Nobody - Stitch Up/JY3_vocals.flac"},{"button_label":"Sample 4","url":"sounds/Bobby Nobody - Stitch Up/MDL1_vocals.flac"}]},{"name":null,"sounds":[{"button_label":"Sample 5","url":"sounds/Bobby Nobody - Stitch Up/MELO_vocals.flac"},{"button_label":"Sample 6","url":"sounds/Bobby Nobody - Stitch Up/REP2_vocals.flac"},{"button_label":"Sample 7","url":"sounds/Bobby Nobody - Stitch Up/TAK2_vocals.flac"},{"button_label":"Sample 8","url":"sounds/Bobby Nobody - Stitch Up/UHL3_vocals.flac"}]}]}', 'https://ryanckim.github.io/listen')

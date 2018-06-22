@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ryanckim.github.io/listen/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ryanckim.github.io/listen/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ryanckim.github.io/listen/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://ryanckim.github.io/listen/images/favicon/manifest.json">
+    <link rel="mask-icon" href="https://ryanckim.github.io/listen/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Include the jQuery Mobile library-->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Listen -->
+    <link rel="stylesheet" href="https://ryanckim.github.io/listen/assets/css/listen.css">
+    <script src="https://ryanckim.github.io/listen/assets/js/listen.js"></script>
+
+</head> 
+
+
+<body>
+
+<div data-role='page' id='id-familiarisation'>
+
+
+
+
+
+
+<div data-role="header">
+
+<a 
+    class='ui-btn-left ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-left ui-icon-carat-l back'>
+    Previous
+</a>
+
+<h1 class='title'>Familiarisation</h1>
+
+<a 
+    href="https://ryanckim.github.io/listen/similarity/"
+    class='ui-btn-right ui-btn ui-btn-inline ui-mini
+           ui-corner-all ui-btn-icon-right ui-icon-carat-r next'>
+    Next
+</a>
+</div>
+
+<!-- Popup window if all listener tries to move on before listening to all samples -->
+<div data-role="popup" class="listen-to-all-samples-popup" data-position-to="window" data-transition="turn">
+    <p>Please listen to all samples before moving on</p>
+</div>
+
+<div data-role="popup" class="submission-wait-popup" data-position-to="window" data-transition="turn">
+    <p>Please wait for this page to redirect...</p>
+</div>
+
+<!-- Popup window for submissions -->
+<div data-role='popup'
+     data-position-to='window'
+     class='ui-corner-all ui-popup ui-body-a ui-overlay-shadow submit-popup'
+     data-theme='b'
+     data-dismissible="false"
+     >
+
+<form method="post"
+      action="https://api.staticman.net/v2/entry/ryanckim/listen/gh-pages"
+      class='submit-form'
+      >
+
+<h2>Thank you, please submit your data:</h2>
+
+<input name="options[slug]" type="hidden" value='familiarisation'>
+<input name="options[redirect]" type="hidden" value='https://ryanckim.github.io/listen/similarity/'>
+
+<input name='fields[name]'
+       value='My name'
+       type='text'
+>
+
+<input name='fields[experiment_id]'
+       value='familiarisation'
+       type='hidden'
+>
+
+<input name='fields[data]'
+       value=''
+       type='hidden'
+>
+
+<input type='submit'
+       value='Submit'
+       >
+
+<input type='button'
+       value='Cancel'
+       class='cancel'
+       >
+</form>
+</div>
+
+<!-- Main layout -->
+<div data-role="main" class="ui-content">
+<h1 id="familiarisation">Familiarisation</h1>
+
+<p>This page is to help you get familiarised with the rating interface for this test.</p>
+
+<p>You can click the buttons to play the corresponding stimuli. The <code class="highlighter-rouge">Reference</code> corresponds to the perfectly extracted vocals track. The <code class="highlighter-rouge">Mix</code> corresponds to the original song, included additionally to help you with rating.</p>
+
+<p>You can listen to any of the presented stimuli as many times as you like. Move the buttons on the sliders to rate the perceived similarity to the <code class="highlighter-rouge">Reference</code>. The stimulus will be looping until you play another one or click the <code class="highlighter-rouge">Stop Audio</code> button. The <code class="highlighter-rouge">Sort</code> button automatically sorts the stimuli based on the scores you gave them so far. It can be useful if you would like to check how you rated the stimuli before you proceed to the next page. Please note that you must listen to all of the stimuli on the page by clicking all the buttons.</p>
+
+<p>Please grade the stimuli in terms of the <strong>overall similarity</strong> to the original vocals as the reference.</p>
+
+
+
+<div class='mushra-container'>
+
+<div class="mushra-references-container" data-role="controlgroup"></div>
+
+
+
+<table class='mushra-table-short'>
+<tr>
+<th class='left-label'>Dissimilar</th>
+<th class='right-label'>Similar</th>
+</tr>
+</table>
+
+
+
+<div class="mushra-slider-container" data-role="ui-content"></div>
+
+<button class="mushra-stop" data-inline="true">Stop Audio</button>
+
+
+<button class="mushra-sort" data-inline="true">Sort</button>
+
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+  /* This ID page wrapper is needed to get the correct javascript
+  triggered with cached pages. I can't come up with anything cleaner at the
+  moment */
+  $('#id-familiarisation').on('pageshow', function () {
+
+      if ('mushra' === 'soundboard')
+        window.listen.createSoundboard('{"continuous_playback":true,"loop_playback":true,"randomise_slider_handle":true,"randomise_sounds_within_page":true,"randomise_pages":true,"show_number_on_slider":true,"must_play_all_samples_to_continue":false,"back_button_can_exit_test":true,"allow_submission":false,"add_consistency_check":false,"allow_slider_sort":true,"labels":["Dissimilar","Similar"],"pages":[{"name":"Set 1","references":[{"button_label":"Reference-Vocals","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.flac"},{"button_label":"Mixture","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/mixture.flac"}],"sounds":[{"name":"Ref","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.flac"},{"name":"Anch1","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/anchor1_interference.flac"},{"name":"Anch2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/anchor2_quality.flac"},{"name":"JY3","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/JY3_vocals.flac"},{"name":"MDL1","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/MDL1_vocals.flac"},{"name":"MELO","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/MELO_vocals.flac"},{"name":"REP2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/REP2_vocals.flac"},{"name":"TAK2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/TAK2_vocals.flac"},{"name":"UHL3","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/UHL3_vocals.flac"}]}]}', 'https://ryanckim.github.io/listen')
+      else if ('mushra' === 'mushra')
+        window.listen.createMUSHRA('{"continuous_playback":true,"loop_playback":true,"randomise_slider_handle":true,"randomise_sounds_within_page":true,"randomise_pages":true,"show_number_on_slider":true,"must_play_all_samples_to_continue":false,"back_button_can_exit_test":true,"allow_submission":false,"add_consistency_check":false,"allow_slider_sort":true,"labels":["Dissimilar","Similar"],"pages":[{"name":"Set 1","references":[{"button_label":"Reference-Vocals","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.flac"},{"button_label":"Mixture","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/mixture.flac"}],"sounds":[{"name":"Ref","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.flac"},{"name":"Anch1","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/anchor1_interference.flac"},{"name":"Anch2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/anchor2_quality.flac"},{"name":"JY3","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/JY3_vocals.flac"},{"name":"MDL1","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/MDL1_vocals.flac"},{"name":"MELO","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/MELO_vocals.flac"},{"name":"REP2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/REP2_vocals.flac"},{"name":"TAK2","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/TAK2_vocals.flac"},{"name":"UHL3","url":"sounds/Ben Carrigan - We_ll Talk About It All Tonight/UHL3_vocals.flac"}]}]}', 'https://ryanckim.github.io/listen')
+  })
+</script>
+
+</div>
+</body>
+</html>
