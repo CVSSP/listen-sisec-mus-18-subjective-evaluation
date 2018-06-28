@@ -1,0 +1,8 @@
+- title: SiSEC 2018 evaluation
+  url: /
+- title: Listening test interfaces
+  sublinks:
+    - title: Soundboard
+      url: /soundboard/
+    - title: Similarity
+      url: /similarity/

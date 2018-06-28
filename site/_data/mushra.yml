@@ -20,24 +20,34 @@ pages:
     - name: 'Set 1'
       references: 
           - button_label: 'Reference 1'
-            url: sounds/dog1.wav
+            url: sounds/BKS - Bulldozer/ref_vocals.wav
           - button_label: 'Reference 2'
-            url: sounds/dog2.wav
+            url: sounds/BKS - Bulldozer/ref_accompaniment.wav
       sounds:
           - name: 'Ref'
-            url: sounds/dog1.wav
+            url: sounds/BKS - Bulldozer/anchor1_interference.wav
           - name: 1
-            url: sounds/dog2.wav
+            url: sounds/BKS - Bulldozer/ref_vocals.wav
           - name: 2
-            url: sounds/dog3.wav
+            url: sounds/BKS - Bulldozer/TAK2_vocals.wav
+          - name: 3
+            url: sounds/BKS - Bulldozer/MELO_vocals.wav
+          - name: 4
+            url: sounds/BKS - Bulldozer/JY3_vocals.wav
     - name: 'Set 2'
       references:
           - button_label: 'Reference'
-            url: sounds/dog4.wav
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.wav
       sounds:
           - name: 'Ref'
-            url: sounds/dog4.wav
-          - name: 1
-            url: sounds/dog5.wav
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/ref_vocals.wav
           - name: 2
-            url: sounds/dog6.wav
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/JY3_vocals.wav
+          - name: 3
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/MELO_vocals.wav
+          - name: 4
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/anchor2_quality.wav
+          - name: 5
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/UHL3_vocals.wav
+          - name: 6
+            url: sounds/Ben Carrigan - We_ll Talk About It All Tonight/REP2_vocals.wav

@@ -1,0 +1,30 @@
+back_button_can_exit_test: true
+continuous_playback: true
+loop_playback: true
+rows:
+    - name: Song 1
+      sounds:
+          - button_label: Original mix
+            url: sounds/Bobby Nobody - Stitch Up/mixture.flac
+          - button_label: Reference vocals
+            url: sounds/Bobby Nobody - Stitch Up/ref_vocals.flac
+    - name: 
+      sounds:
+          - button_label: Sample 1
+            url: sounds/Bobby Nobody - Stitch Up/anchor1_interference.flac
+          - button_label: Sample 2
+            url: sounds/Bobby Nobody - Stitch Up/anchor2_quality.flac
+          - button_label: Sample 3
+            url: sounds/Bobby Nobody - Stitch Up/JY3_vocals.flac
+          - button_label: Sample 4
+            url: sounds/Bobby Nobody - Stitch Up/MDL1_vocals.flac
+    - name: 
+      sounds:            
+          - button_label: Sample 5
+            url: sounds/Bobby Nobody - Stitch Up/MELO_vocals.flac
+          - button_label: Sample 6
+            url: sounds/Bobby Nobody - Stitch Up/REP2_vocals.flac
+          - button_label: Sample 7
+            url: sounds/Bobby Nobody - Stitch Up/TAK2_vocals.flac
+          - button_label: Sample 8
+            url: sounds/Bobby Nobody - Stitch Up/UHL3_vocals.flac
