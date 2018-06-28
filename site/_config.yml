@@ -3,10 +3,10 @@ title: "Listen"
 description: >
     "Run listening tests in the browser locally or via GitHub pages"
 baseurl: ""
-url: "https://deeuu.github.io/listen"
+url: "https://ryanckim.github.io/listen"
 
 github:
-    username: "deeuu"
+    username: "ryanckim"
     repository : "listen"
     branch: "gh-pages"
 

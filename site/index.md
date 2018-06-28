@@ -1,10 +1,12 @@
 ---
 layout: page
 title: Welcome
-next_url: /soundboard/
+next_url: /tutorial/
 ---
-# Welcome to Listen
+# Perceptual Evaluation of Source Separation Algorithms
 
-Listen is a tools that enables you to run listening tests in the browser locally or via GitHub pages.
+Thank you for taking part in the listening test.
 
-The GitHub repository can be found at: [https://github.com/deeuu/listen](https://github.com/deeuu/listen)
+The "next" button will take you to the tutorial and familiarisation pages, where you can listen to various samples of the stimuli, and then to the actual test pages, where you are asked to grade the stimuli based on the **overall similarity** to the original vocal sound.
+
+Please feel free to pause at any time if you have any question or need any assistance in taking the test.
