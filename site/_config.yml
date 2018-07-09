@@ -1,13 +1,13 @@
 # Site Settings
-title: "Listen"
+title: "SiSEC MUS18 Subjective Evaluation - Listening Test"
 description: >
     "Run listening tests in the browser locally or via GitHub pages"
 baseurl: ""
-url: "https://ryanckim.github.io/listen"
+url: "https://ryanckim.github.io/listen-sisec-mus-18-subjective-evaluation"
 
 github:
     username: "ryanckim"
-    repository : "listen"
+    repository : "listen-sisec-mus-18-subjective-evaluation"
     branch: "gh-pages"
 
 # Build Setting
