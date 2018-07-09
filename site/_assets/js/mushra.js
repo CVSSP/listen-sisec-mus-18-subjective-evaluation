@@ -288,7 +288,7 @@ Mushra.prototype.fillConfig = function () {
   }.bind(this)
 
   let dur = this.config.pages[this.currentPage].duration
-  if ((dur === null) || (dur === 0)) {
+  if ((dur == null) || (dur === 0)) {
     if (this.loader.timerStarted) {
       this.config.pages[this.currentPage].duration = this.loader.endTimer()
     } else {
