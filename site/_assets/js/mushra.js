@@ -11,6 +11,7 @@ export function Mushra (config) {
   this.numberOfSounds = 0
   this.numberOfPages = this.config.pages.length
   this.currentPageSoundOrder = null
+  this.lock_nav = false
 
   if (this.config.add_consistency_check) {
     let idx = utils.randomNumber(0, this.numberOfPages, true)
@@ -82,6 +83,7 @@ Mushra.prototype.configureButtons = function () {
 }
 
 Mushra.prototype.onNextOrBackButtonClick = function (direction) {
+  if (this.lock_nav) { return }
   if (this.loader) { this.loader.stop(true) }
 
   if (this.pageCounter === 0 && direction < 0) {
@@ -142,9 +144,8 @@ Mushra.prototype.loadPage = function () {
   this.loader = new AudioLoader(this.urls,
                                 this.config.continuous_playback,
                                 this.config.loop_playback)
-
+  this.lock_nav = true
   activePage('.mushra-container').hide()
-
   this.loader.load(this.setupGUI.bind(this))
 }
 
@@ -153,6 +154,7 @@ Mushra.prototype.setupGUI = function () {
 
   this.createReferences()
   this.createSliders()
+  this.lock_nav = false
 }
 
 Mushra.prototype.createReferences = function () {
@@ -301,7 +303,7 @@ Mushra.prototype.fillConfig = function () {
   if (this.config.pages[this.currentPage].is_replicate == null) {
     this.config.pages[this.currentPage].is_replicate = false
   }
-
+  
   activePage('.ui-slider input').each(function (i) {
     setRating(i, $(this).val())
   })

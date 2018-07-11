@@ -3,10 +3,10 @@ title: "SiSEC MUS18 Subjective Evaluation - Listening Test"
 description: >
     "Run listening tests in the browser locally or via GitHub pages"
 baseurl: ""
-url: "https://ryanckim.github.io/listen-sisec-mus-18-subjective-evaluation"
+url: "https://CVSSP.github.io/listen-sisec-mus-18-subjective-evaluation"
 
 github:
-    username: "ryanckim"
+    username: "CVSSP"
     repository : "listen-sisec-mus-18-subjective-evaluation"
     branch: "gh-pages"
 
