@@ -8,4 +8,4 @@ next_url: /
 
 # Listening test
 
-Please grade the stimuli in terms of the **overall similarity** to the original vocals as the reference.
+Please grade the stimuli in terms of the **overall similarity** to the reference vocals.

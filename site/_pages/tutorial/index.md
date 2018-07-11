@@ -9,8 +9,6 @@ next_url: /familiarisation/
 
 This tutorial page is to help you better understand what you are asked about and what to expect during the test.
 
-You are asked to evaluate the performance of source separation algorithms that attempt to separate the vocal from a mixture. The ideal result would be if the algorithm could perfectly extract the **Reference vocals**, so you are asked to rate how similar each test item is to this idea. The **Original mix** is also included to help guide your judgement, but it is the **Reference vocals** that you are asked to compare with, not the **Original mix**. In other words, the highest-rated stimulus should sound as close as possible to the **Reference vocals** track only.
-
 Here you can listen to some audio samples with the types of degradation presented during the listening test. The **Reference vocals** example corresponds to the vocal track that contributes to the **Original mix**.
 
 The degradation can be in terms of:
