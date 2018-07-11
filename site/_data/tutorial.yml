@@ -4,10 +4,10 @@ loop_playback: true
 rows:
     - name: Song 1
       sounds:
-          - button_label: Original mix
-            url: sounds/Bobby Nobody - Stitch Up/mixture.flac
           - button_label: Reference vocals
             url: sounds/Bobby Nobody - Stitch Up/ref_vocals.flac
+          - button_label: Original mix
+            url: sounds/Bobby Nobody - Stitch Up/mixture.flac
     - name: 
       sounds:
           - button_label: Sample 1
